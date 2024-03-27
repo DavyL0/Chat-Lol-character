@@ -1,5 +1,6 @@
 package com.chatlol;
 
+import com.chatlol.application.AskChampionUseCase;
 import com.chatlol.application.ListChampionsUseCase;
 import com.chatlol.domain.ports.ChampionsRepository;
 import org.springframework.boot.SpringApplication;
@@ -17,5 +18,9 @@ public class ChatLolApplication {
 		return new ListChampionsUseCase(repository);
 	}
 
+	@Bean
+	public AskChampionUseCase provideAskChampionsUseCase(ChampionsRepository repository){
+		return new AskChampionUseCase(repository);
+	}
 }
 

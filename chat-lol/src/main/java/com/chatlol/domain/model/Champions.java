@@ -9,9 +9,10 @@ public record Champions(
 ) {
         public String generateContextByQuestion(String question) {
             return """
+                    Pergunta: %s  
                     Nome do Campeão: %s
                     Função: %s
                     Lore: %s
-                    """.formatted(this.name, this.role, this.lore);
+                    """.formatted(question, this.name, this.role, this.lore);
         }
 }

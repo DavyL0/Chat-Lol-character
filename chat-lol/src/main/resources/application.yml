@@ -14,4 +14,10 @@ spring:
     jpa:
         defer-datasource-initialization: true
 
+    openai:
+        base-url: https://api.openai.com
+        api-key: ${OPENAI_API_KEY}
 
+    gemini:
+        base-url: https://generativelanguage.googleapis.com
+        api-key: ${GEMINI_API_KEY}
